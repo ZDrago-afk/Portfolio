@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaheer Abbas Khan - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #ff6a00;
+            box-shadow: 0 4px 10px rgba(255, 106, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            text-shadow: 0 0 5px #ff6a00;
+        }
+
+        header p {
+            color: #cccccc;
+        }
+
+        nav {
+            background: #121212;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(255, 106, 0, 0.1);
+        }
+
+        nav a {
+            color: #ffb07c;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            position: relative; /* required for ::after underline */
+            transition: color 0.3s ease;
+        }
+        nav a::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -6px;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #ff6a00;
+                        transform: scaleX(0);
+                        transform-origin: right;
+                        transition: transform 0.3s ease;
+                        border-radius: 2px;
+        }
+
+        nav a:hover {
+            color: #ff6a00;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        nav a.active-link {
+            color: #ff6a00;
+            font-weight: bold;
+        }
+
+        nav a.active-link::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+
+        section {
+            display: none;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: #1a1a1a;
+            border-left: 4px solid #ff6a00;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(255, 106, 0, 0.1);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            color: #ff6a00;
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #333333;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        ul li a {
+            color: #ff6a00; /* orange */
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 5px;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #ffb07c; /* soft orange on hover */
+            text-decoration: underline;
+        }
+
+        .contact-info a {
+            color: #ffb07c;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #ff6a00;
+        }
+
+        .profile-pic {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .profile-pic img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid #B300FF;
+            box-shadow: 0 0 10px #B300FF;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #1a1a1a;
+            color: #999999;
+            border-top: 3px solid #ff6a00;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 1rem;
+                margin: 1rem;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-pic">
+            <img src="20241030_115855.jpg" alt="Zaheer Abbas Khan">
+        </div>
+        <h1>Zaheer Abbas Khan</h1>
+        <p> Ethical Hacker | Junior Cybersecurity Analyst | Red Teamer in the Making  </p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#certs">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="active">
+    <h2>About Me</h2>
+    <ul>
+        <li>
+            <strong>Cybersecurity Aspirant:</strong> Pursuing an Integrated M.Sc. in Computer Science at the Central University of Rajasthan, with a focus on ethical hacking, red teaming, and security analysis.
+        </li>
+        <li>
+            <strong>Certified Professional:</strong> Holder of industry-recognized certifications including Certified Ethical Hacker and Junior Cybersecurity Analyst from Cisco, along with multiple hands-on trainings in network and system security.
+        </li>
+        <li>
+            <strong>Hands-On Learning:</strong> Skilled in using tools like Kali Linux, Wireshark, John the Ripper, and Metasploit for penetration testing, OSINT, and vulnerability assessments.
+        </li>
+        <li>
+            <strong>Resilient Mindset:</strong> My journey is shaped by perseverance through personal challenges, which has developed my ability to stay focused, self-driven, and detail-oriented.
+        </li>
+        <li>
+            <strong>Career Objective:</strong> To contribute to cybersecurity teams by ethically identifying system vulnerabilities, improving security protocols, and building a safer digital environment.
+        </li>
+        <li>
+            <strong>Core Values:</strong> Integrity, continuous learning, ethical responsibility, and a mission-driven approach to problem-solving.
+        </li>
+    </ul>
+</section>
+
+
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+    <li><strong>Integrated M.Sc. in Computer Science</strong><br>Central University of Rajasthan (2023–Present)</li>
+    <li>5-year integrated Master's program combining undergraduate and postgraduate studies in Computer Science.</li>
+    <li>Studied core subjects like Data Structures, Algorithms, Operating Systems, and Web Technologies.</li>
+    <li>Specialized in Cybersecurity with focus on Network Security, Cryptography, and Ethical Hacking.</li>
+    <li>Hands-on experience with Kali Linux, Wireshark, Metasploit, and John the Ripper for vulnerability analysis and penetration testing.</li>
+    <li>Simulated attacks like DNS poisoning and developed phishing awareness modules through personal projects.</li>
+    <li>Applied OSINT, system hardening techniques, and risk analysis in academic labs and independent practice.</li>
+    <li>Supplementing academics with industry-recognized certifications to build strong real-world readiness.</li>
+</ul>
+
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>Operating Systems:</strong> Kali Linux, Ubuntu</li>
+            <li><strong>Languages:</strong> Python, C++, JavaScript</li>
+            <li><strong>Security:</strong> Network Security, OSINT, Password Cracking</li>
+            <li><strong>Tools:</strong> Wireshark, John the Ripper, Metasploit, Burp Suite</li>
+            <li><strong>Other:</strong> Git, AI & NLP Basics, Web Development</li>
+        </ul>
+    </section>
+
+    <section id="achievements">
+    <h2>Achievements</h2>
+    <ul>
+        <li>
+            <img src="ethical-hacker.png" alt="Cisco Ethical Hacker Badge" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow: 0 4px 12px rgb(0, 255, 255); border-radius: 8px;">
+
+            <strong>Cisco Certified Ethical Hacker</strong>
+        </li>
+        <li>
+            <img src="junior-cybersecurity-analyst-career-path.1.png" alt="Junior Cybersecurity Analyst Badge" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow: 0 4px 12px rgb(179, 0, 255); border-radius: 8px;">
+
+            <strong>Junior Cybersecurity Analyst - Cisco</strong>
+        </li>
+    </ul>
+</section>
+
+<section id="certs">
+    <h2>Certifications</h2>
+    <ul>
+        <li>Ethical Hacker (Cisco) – 
+            <a href="https://www.netacad.com/certificates?issuanceId=0ce42abc-7900-4536-8249-47905b7284e1" target="_blank">View Certificate</a>
+        </li>
+        <li>Junior Cybersecurity Analyst (Cisco) – 
+            <a href="https://www.netacad.com/certificates?issuanceId=158be225-d227-4d7d-98a8-03a86473ced9" target="_blank">View Certificate</a>
+        </li>
+        <li>Cyber Security Best Practices (Alison) – 
+            <a href="https://alison.com/certification/check/937919e3f9" target="_blank">View Certificate</a>
+        </li>
+        <li>Career Essentials in Cybersecurity (Microsoft and LinkedIn) – 
+            <a href="https://www.linkedin.com/learning/certificates/45fc164d93f2be70911955bf90e823e370bf807b72be4a8c1080c0d7d8d766cb" target="_blank">View Certificate</a>
+        </li>
+        <li>CCNA Network Fundamentals (Simplilearn) – 
+            <a href="https://simpli-web.app.link/e/wqKNDNbOAUb" target="_blank">View Certificate</a>
+        </li>
+        <li>CISSP Introduction (Simplilearn) – 
+            <a href="https://simpli-web.app.link/e/nxijwqgOAUb" target="_blank">View Certificate</a>
+        </li>
+        <li>Network Security (Great Learning) – 
+            <a href="https://olympus.mygreatlearning.com/courses/70951/certificate" target="_blank">View Certificate</a>
+        </li>
+        <li>Advanced Cyber Security - Threats and Governance (Great Learning) – 
+            <a href="https://olympus.mygreatlearning.com/courses/34484/certificate" target="_blank">View Certificate</a>
+        </li>
+        <li>Cyber Forensics (Great Learning) – 
+            <a href="https://olympus.mygreatlearning.com/courses/65868/certificate" target="_blank">View Certificate</a>
+        </li>
+    </ul>
+    
+</section>
+
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>DNS Poisoning Attack Simulation</strong><br>Built a simulated DNS poisoning setup within a local LAN. Documented mitigation strategies in a professional penetration test report.</li>
+            <li><strong>Phishing Policy Enforcement Guide</strong><br>Created layered phishing defense policy visuals using real screenshots and case-based analysis. Integrated into cybersecurity awareness training.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-info">
+            <li>Email: <a href="mailto:zaheerjavedkhankct@gmail.com">zaheerjavedkhankct@gmail.com</a></li>
+            <li>Phone: <a href="tel:+918107155688">+91 81071 55688</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/zaheer-khan-919b632b6" target="_blank">linkedin.com/in/zaheer-khan</a></li>
+            <li>GitHub: <a href="https://github.com/ZDrago-afk" target="_blank">https://github.com/ZDrago-afk</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Zaheer Abbas Khan. Resilient. Fearless. Focused.</p>
+    </footer>
+
+    <script>
+    const links = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    links.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+
+            // Activate the right section
+            const id = link.getAttribute('href').substring(1);
+            sections.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            // Highlight the clicked nav link
+            links.forEach(l => l.classList.remove('active-link'));
+            link.classList.add('active-link');
+        });
+    });
+
+    // Set About as default active link
+    document.querySelector('nav a[href="#about"]').classList.add('active-link');
+</script>
+
+
+</body>
+</html>
