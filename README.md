@@ -93,16 +93,16 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 
 ## 🎨 Color Scheme
 
-| Color Name       | Hex Code   | Preview |
-|-----------------|-----------|---------|
-| Cyber Red       | #ff003c   | ![#ff003c](https://via.placeholder.com/15/ff003c/000000?text=+) |
-| Cyber Red Light | #ff1744   | ![#ff1744](https://via.placeholder.com/15/ff1744/000000?text=+) |
-| Cyber Red Dark  | #cc002f   | ![#cc002f](https://via.placeholder.com/15/cc002f/000000?text=+) |
-| Cyber Black     | #0a0a0a   | ![#0a0a0a](https://via.placeholder.com/15/0a0a0a/000000?text=+) |
-| Cyber Dark      | #111111   | ![#111111](https://via.placeholder.com/15/111111/000000?text=+) |
-| Cyber Gray      | #1a1a1a   | ![#1a1a1a](https://via.placeholder.com/15/1a1a1a/000000?text=+) |
-| Cyber Light     | #2a2a2a   | ![#2a2a2a](https://via.placeholder.com/15/2a2a2a/000000?text=+) |
-| Cyber Text      | #e0e0e0   | ![#e0e0e0](https://via.placeholder.com/15/e0e0e0/000000?text=+) |
+| Color Name       | Hex Code   |
+|-----------------|-----------|
+| Cyber Red       | #ff003c   |
+| Cyber Red Light | #ff1744   |
+| Cyber Red Dark  | #cc002f   |
+| Cyber Black     | #0a0a0a   |
+| Cyber Dark      | #111111   |
+| Cyber Gray      | #1a1a1a   |
+| Cyber Light     | #2a2a2a   |
+| Cyber Text      | #e0e0e0   |
 
 
 ## 🎮 Usage Guide
