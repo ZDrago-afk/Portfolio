@@ -136,7 +136,7 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 2. Go to Settings → Pages
 3. Select the main branch and root folder
 4. Access the site at:
-   https://username.github.io/repository-name
+   https://zdrago-afk.github.io/Portfolio
 
 ### Netlify
 - Drag and drop the project folder
