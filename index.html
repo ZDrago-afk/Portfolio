@@ -1,397 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zaheer Abbas Khan - Portfolio</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-  background-color: #0b0b0b;
-  color: #f5f5f5;
-  line-height: 1.6;
-}
-
-header {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 3px solid #ff1744;
-  box-shadow: 0 0 20px #ff003c60;
-  position: relative;
-  overflow: hidden;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 150%;
-  background: url('bg_image.jpg') no-repeat center center / cover;
-  opacity: 0.085;
-  z-index: 0;
-  filter: blur(1px);
-}
-
-header h1 {
-  font-size: 2.7rem;
-  color: #ffffff;
-  text-shadow: 0 0 12px #ff1744, 0 0 20px #ff003c;
-}
-
-header p {
-  color: #cccccc;
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;
-}
-
-nav {
-  background: #111;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 10px #ff003c25;
-}
-
-nav a {
-  color: #ff8a80;
-  text-decoration: none;
-  margin: 0 1.2rem;
-  font-size: 1rem;
-  position: relative;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #ff1744;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-  border-radius: 2px;
-}
-
-nav a:hover {
-  color: #ff1744;
-  text-shadow: 0 0 5px #ff003c99;
-}
-
-nav a:hover::after,
-nav a.active-link::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-nav a.active-link {
-  color: #ff1744;
-  font-weight: 600;
-  text-shadow: 0 0 5px #ff1744;
-}
-
-section {
-  display: none;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 800px;
-  background: #1c1c1c;
-  border-left: 4px solid #ff003c;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #ff003c20;
-  animation: fadeIn 0.4s ease-in-out;
-}
-
-section.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-h2 {
-  color: #ff003c;
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  text-shadow: 0 0 5px #ff003c;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 0.75rem 0;
-  border-bottom: 1px solid #333;
-}
-
-li:last-child {
-  border-bottom: none;
-}
-
-ul li a {
-  color: #ff1744;
-  text-decoration: none;
-  margin-left: 5px;
-  transition: color 0.3s ease;
-}
-
-ul li a:hover {
-  color: #ff8a80;
-  text-decoration: underline;
-}
-
-.contact-info a {
-  color: #ff8a80;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.contact-info a:hover {
-  color: #ff003c;
-  text-shadow: 0 0 8px #ff003c;
-}
-
-.profile-pic {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.profile-pic img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 4px solid #ff003c;
-  box-shadow: 0 0 15px #ff003c;
-  z-index: 1;
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-.profile-pic img:hover {
-  transform: scale(1.05);
-}
-
-.profile-pic,
-header h1,
-header p {
-  position: relative;
-  z-index: 1;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  color: #aaa;
-  border-top: 3px solid #ff1744;
-  font-size: 0.9rem;
-  letter-spacing: 0.3px;
-}
-
-@media (max-width: 600px) {
-  section {
-    padding: 1rem;
-    margin: 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  nav a {
-    margin: 0 0.5rem;
-    font-size: 0.9rem;
-  }
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAHEER ABBAS KHAN | Ethical Hacker & Security Specialist</title>
+    <meta name="description" content="Cybersecurity portfolio of Zaheer Abbas Khan - Ethical Hacker, Red Team Operator, and Security Researcher">
+    <meta name="keywords" content="ethical hacker, cybersecurity, penetration testing, red team, security specialist, portfolio">
+    <meta name="author" content="Zaheer Abbas Khan">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="ZAHEER ABBAS KHAN | Ethical Hacker">
+    <meta property="og:description" content="Cybersecurity specialist portfolio - Red Team Operator & Security Researcher">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com">
 </head>
 <body>
-  <header>
-    <div class="profile-pic">
-      <img src="photo_1.jpeg" alt="Zaheer Abbas Khan">
+    <!-- === TERMINAL INTERFACE === -->
+    <div class="terminal-frame">
+        <div class="terminal-header">
+            <div class="terminal-controls">
+                <span class="control close" title="Close Terminal"></span>
+                <span class="control minimize" title="Minimize"></span>
+                <span class="control maximize" title="Maximize"></span>
+            </div>
+            <div class="terminal-title">
+                <i class="fas fa-terminal"></i> root@zaheer:~$ ./portfolio --launch --security-mode=red
+            </div>
+        </div>
+
+        <!-- === MAIN CONTAINER === -->
+        <div class="main-container">
+            <!-- HERO SECTION -->
+            <header class="hero-section">
+                <div class="scan-line"></div>
+                
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <img src="assets/photo_1.jpeg" alt="Zaheer Abbas Khan - Cybersecurity Specialist" class="profile-img">
+                        <div class="profile-overlay">
+                            <div class="status-indicator">
+                                <span class="pulse-dot"></span>
+                                <span class="status-text">[ACTIVE] TARGET ACQUIRED</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="identity-display">
+                        <h1 class="cyber-name">ZAHEER_ABBAS_KHAN</h1>
+                        <div class="role-scroll">
+                            <span class="role-tag">ETHICAL_HACKER</span>
+                            <span class="role-tag">RED_TEAM_OPERATOR</span>
+                            <span class="role-tag">THREAT_ANALYST</span>
+                            <span class="role-tag">SECURITY_RESEARCHER</span>
+                        </div>
+                        <div class="access-code">
+                            <span class="code-line">ACCESS LEVEL: <span class="red-text">MAXIMUM</span></span>
+                            <span class="code-line">CLEARANCE: <span class="red-text">TOP_SECRET</span></span>
+                            <span class="code-line">STATUS: <span class="red-text">OPERATIONAL</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="cyber-nav" aria-label="Main Navigation">
+                    <a href="#identity" class="nav-btn active" aria-current="page">
+                        <i class="fas fa-fingerprint"></i>
+                        <span>IDENTITY</span>
+                    </a>
+                    <a href="#capabilities" class="nav-btn">
+                        <i class="fas fa-brain"></i>
+                        <span>CAPABILITIES</span>
+                    </a>
+                    <a href="#operations" class="nav-btn">
+                        <i class="fas fa-code"></i>
+                        <span>OPERATIONS</span>
+                    </a>
+                    <a href="#credentials" class="nav-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>CREDENTIALS</span>
+                    </a>
+                    <a href="#trophies" class="nav-btn">
+                        <i class="fas fa-trophy"></i>
+                        <span>TROPHIES</span>
+                    </a>
+                    <a href="#contact" class="nav-btn">
+                        <i class="fas fa-satellite"></i>
+                        <span>CONTACT</span>
+                    </a>
+                </nav>
+            </header>
+
+            <!-- === CONTENT SECTIONS === -->
+            <main class="content-sections">
+                <!-- IDENTITY SECTION -->
+                <section id="identity" class="content-section active" aria-labelledby="identity-heading">
+                    <div class="section-header">
+                        <h2 id="identity-heading"><span class="section-num">01</span> / IDENTITY_PROTOCOL</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    
+                    <div class="identity-grid">
+                        <article class="identity-card">
+                            <div class="card-title">
+                                <i class="fas fa-crosshairs"></i>
+                                <h3>MISSION_PROFILE</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>I operate at the intersection of <span class="highlight">offensive security research</span> and <span class="highlight">defensive strategy development</span>. My approach: understand attack vectors to build impregnable defenses.</p>
+                                <div class="mission-points">
+                                    <div class="point">
+                                        <i class="fas fa-skull-crossbones"></i>
+                                        <div class="point-content">
+                                            <h4>RED TEAM MINDSET</h4>
+                                            <p>Think like an attacker to defend like a fortress</p>
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <i class="fas fa-eye"></i>
+                                        <div class="point-content">
+                                            <h4>CONTINUOUS VIGILANCE</h4>
+                                            <p>Security is never complete, only evolving</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="identity-card">
+                            <div class="card-title">
+                                <i class="fas fa-bullseye"></i>
+                                <h3>OBJECTIVES</h3>
+                            </div>
+                            <div class="card-content">
+                                <ul class="objectives-list">
+                                    <li>Bridge theoretical security concepts with practical threat mitigation</li>
+                                    <li>Develop intelligent security tools for proactive defense</li>
+                                    <li>Contribute to red team operations with ethical precision</li>
+                                    <li>Advance cybersecurity education through hands-on research</li>
+                                </ul>
+                                <div class="stats-display">
+                                    <div class="stat">
+                                        <span class="stat-value">100+</span>
+                                        <span class="stat-label">Security Tools</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">50+</span>
+                                        <span class="stat-label">CTF Challenges</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-value">∞</span>
+                                        <span class="stat-label">Learning Mindset</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- CAPABILITIES SECTION -->
+                <section id="capabilities" class="content-section" aria-labelledby="capabilities-heading">
+                    <div class="section-header">
+                        <h2 id="capabilities-heading"><span class="section-num">02</span> / SYSTEM_CAPABILITIES</h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="capabilities-grid">
+                        <!-- OFFENSIVE SECURITY -->
+                        <article class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-user-secret"></i>
+                                OFFENSIVE_SECURITY
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item" data-level="95">
+                                    <div class="skill-header">
+                                        <span>Penetration Testing</span>
+                                        <span class="skill-percent">95%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="90">
+                                    <div class="skill-header">
+                                        <span>Vulnerability Assessment</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="88">
+                                    <div class="skill-header">
+                                        <span>Exploit Development</span>
+                                        <span class="skill-percent">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="85">
+                                    <div class="skill-header">
+                                        <span>Social Engineering</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="92">
+                                    <div class="skill-header">
+                                        <span>Reverse Engineering</span>
+                                        <span class="skill-percent">92%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- DEFENSIVE SECURITY -->
+                        <article class="skill-category">
+                            <h3 class="category-title">
+                                <i class="fas fa-shield-alt"></i>
+                                DEFENSIVE_SECURITY
+                            </h3>
+                            <div class="skills-list">
+                                <div class="skill-item" data-level="93">
+                                    <div class="skill-header">
+                                        <span>Threat Hunting</span>
+                                        <span class="skill-percent">93%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="90">
+                                    <div class="skill-header">
+                                        <span>Incident Response</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="87">
+                                    <div class="skill-header">
+                                        <span>SIEM Analysis</span>
+                                        <span class="skill-percent">87%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="85">
+                                    <div class="skill-header">
+                                        <span>Security Auditing</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="88">
+                                    <div class="skill-header">
+                                        <span>Forensic Analysis</span>
+                                        <span class="skill-percent">88%</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-level"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- TOOLS & TECHNOLOGIES -->
+                        <article class="skill-category wide">
+                            <h3 class="category-title">
+                                <i class="fas fa-tools"></i>
+                                TOOLS_ARSENAL
+                            </h3>
+                            <div class="tools-grid">
+                                <div class="tool" data-tool="Metasploit Framework">
+                                    <i class="fas fa-bomb"></i>
+                                    <span>Metasploit</span>
+                                </div>
+                                <div class="tool" data-tool="Web Vulnerability Scanner">
+                                    <i class="fas fa-spider"></i>
+                                    <span>Burp Suite</span>
+                                </div>
+                                <div class="tool" data-tool="Network Protocol Analyzer">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>Wireshark</span>
+                                </div>
+                                <div class="tool" data-tool="Network Discovery">
+                                    <i class="fas fa-search"></i>
+                                    <span>Nmap</span>
+                                </div>
+                                <div class="tool" data-tool="Password Cracker">
+                                    <i class="fas fa-unlock-alt"></i>
+                                    <span>John the Ripper</span>
+                                </div>
+                                <div class="tool" data-tool="Security Distribution">
+                                    <i class="fas fa-dragon"></i>
+                                    <span>Kali Linux</span>
+                                </div>
+                                <div class="tool" data-tool="Programming Language">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="tool" data-tool="Version Control">
+                                    <i class="fab fa-git-alt"></i>
+                                    <span>Git</span>
+                                </div>
+                                <div class="tool" data-tool="Cloud Security">
+                                    <i class="fab fa-aws"></i>
+                                    <span>AWS Security</span>
+                                </div>
+                                <div class="tool" data-tool="Containerization">
+                                    <i class="fab fa-docker"></i>
+                                    <span>Docker</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- OPERATIONS SECTION -->
+<section id="operations" class="content-section" aria-labelledby="operations-heading">
+    <div class="section-header">
+        <h2 id="operations-heading"><span class="section-num">03</span> / FIELD_OPERATIONS</h2>
+        <div class="section-line"></div>
     </div>
-    <h1>Zaheer Abbas Khan</h1>
-    <p>Ethical Hacker | Junior Cybersecurity Analyst | Red Teamer in the Making</p>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#certs">Certifications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="operations-grid">
+        <!-- DarkTorch - Browser Extension -->
+        <article class="operation-card">
+            <div class="op-icon">
+                <div class="project-logo">
+                    <img src="assets/logos/DarkTorch.jpeg" alt="DarkTorch Logo" class="project-logo-img">
+                </div>
+            </div>
+            <div class="op-content">
+                <h3>DARKTORCH</h3>
+                <p class="op-desc">Interactive browser extension with cursor spotlight for dark mode browsing. Privacy-focused visual tool.</p>
+                <div class="op-tech">
+                    <span>JavaScript</span>
+                    <span>CSS3</span>
+                    <span>Chrome API</span>
+                </div>
+                <a href="https://github.com/ZDrago-afk/DarkTorch" class="op-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> ACCESS_SOURCE
+                </a>
+            </div>
+        </article>
 
-  <section id="about" class="active">
-    <h2>About Me</h2>
-    <ul>
-      <li><strong>Cybersecurity Aspirant:</strong> Pursuing an Integrated M.Sc. in Computer Science at the Central University of Rajasthan, with a focus on ethical hacking, red teaming, and security analysis.</li>
-      <li><strong>Certified Professional:</strong> Holder of industry-recognized certifications including Certified Ethical Hacker and Junior Cybersecurity Analyst from Cisco, along with multiple hands-on trainings in network and system security.</li>
-      <li><strong>Hands-On Learning:</strong> Skilled in using tools like Kali Linux, Wireshark, John the Ripper, and Metasploit for penetration testing, OSINT, and vulnerability assessments.</li>
-      <li><strong>Resilient Mindset:</strong> My journey is shaped by perseverance through personal challenges, which has developed my ability to stay focused, self-driven, and detail-oriented.</li>
-      <li><strong>Career Objective:</strong> To contribute to cybersecurity teams by ethically identifying system vulnerabilities, improving security protocols, and building a safer digital environment.</li>
-      <li><strong>Core Values:</strong> Integrity, continuous learning, ethical responsibility, and a mission-driven approach to problem-solving.</li>
-    </ul>
-  </section>
+        <!-- Devil's Eye - Keylogger Educational Tool -->
+        <article class="operation-card">
+            <div class="op-icon">
+                <div class="project-logo">
+                    <img src="assets/logos/devil_eye.png" alt="Devil's Eye Logo" class="project-logo-img">
+                </div>
+            </div>
+            <div class="op-content">
+                <h3>DEVIL'S EYE</h3>
+                <p class="op-desc">Educational keylogger for security awareness training with ethical consent mechanisms and detection techniques.</p>
+                <div class="op-tech">
+                    <span>Python</span>
+                    <span>PyAutoGUI</span>
+                    <span>Security Education</span>
+                </div>
+                <a href="https://github.com/ZDrago-afk/Devils-Eye" class="op-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> ACCESS_SOURCE
+                </a>
+            </div>
+        </article>
 
-  <section id="education">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>Integrated M.Sc. in Computer Science</strong><br>Central University of Rajasthan (2023–Present)</li>
-      <li>5-year integrated Master's program combining undergraduate and postgraduate studies in Computer Science.</li>
-      <li>Studied core subjects like Data Structures, Algorithms, Operating Systems, and Web Technologies.</li>
-      <li>Specialized in Cybersecurity with focus on Network Security, Cryptography, and Ethical Hacking.</li>
-      <li>Hands-on experience with Kali Linux, Wireshark, Metasploit, and John the Ripper for vulnerability analysis and penetration testing.</li>
-      <li>Simulated attacks like DNS poisoning and developed phishing awareness modules through personal projects.</li>
-      <li>Applied OSINT, system hardening techniques, and risk analysis in academic labs and independent practice.</li>
-      <li>Supplementing academics with industry-recognized certifications to build strong real-world readiness.</li>
-    </ul>
-  </section>
+        <!-- Demon-pot - SSH Honeypot -->
+        <article class="operation-card">
+            <div class="op-icon">
+                <div class="project-logo">
+                    <img src="assets/logos/demon_pot.png" alt="Demon-pot Logo" class="project-logo-img">
+                </div>
+            </div>
+            <div class="op-content">
+                <h3>DEMON-POT</h3>
+                <p class="op-desc">SSH honeypot for attacker behavior research and intelligence gathering using Paramiko library.</p>
+                <div class="op-tech">
+                    <span>Python</span>
+                    <span>Paramiko</span>
+                    <span>Network Security</span>
+                </div>
+                <a href="https://github.com/ZDrago-afk/Demon-pot" class="op-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> ACCESS_SOURCE
+                </a>
+            </div>
+        </article>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>Operating Systems:</strong> Kali Linux, Ubuntu</li>
-      <li><strong>Languages:</strong> Python, C++, JavaScript</li>
-      <li><strong>Security:</strong> Network Security, OSINT, Password Cracking</li>
-      <li><strong>Tools:</strong> Wireshark, John the Ripper, Metasploit, Burp Suite, Nmap, Nikto, Nessus</li>
-      <li><strong>Other:</strong> Git, AI & NLP Basics, Web Development</li>
-    </ul>
-  </section>
+        <!-- copy_tip - Desktop Clipboard App -->
+        <article class="operation-card">
+            <div class="op-icon">
+                <div class="project-logo">
+                    <img src="assets/logos/copy_tip.png" alt="copy_tip Logo" class="project-logo-img">
+                </div>
+            </div>
+            <div class="op-content">
+                <h3>COPY_TIP</h3>
+                <p class="op-desc">Educational desktop app demonstrating application-scoped input capture for security awareness.</p>
+                <div class="op-tech">
+                    <span>Python</span>
+                    <span>Tkinter</span>
+                    <span>Security Education</span>
+                </div>
+                <a href="https://github.com/ZDrago-afk/copy_tip" class="op-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> ACCESS_SOURCE
+                </a>
+            </div>
+        </article>
 
-  <section id="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li><img src="ethical-hacker.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #2301ff; border-radius:8px;"><strong>Ethical Hacker - Cisco</strong></li>
-      <li><img src="junior-cybersecurity-analyst-career-path.1.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #ff003c; border-radius:8px;"><strong>Junior Cybersecurity Analyst - Cisco</strong></li>
-      <li><img src="cyber-threat-management.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #ff00f2; border-radius:8px;"><strong>Cyber Threat Management - Cisco</strong></li>
-      <li><img src="networking-basics.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #54ff04; border-radius:8px;"><strong>Networking Basics - Cisco</strong></li>
-      <li><img src="networking-devices-and-initial-configuration.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #ffe100; border-radius:8px;"><strong>Networking devices and initial configuration - Cisco</strong></li>
-      <li><img src="Introduction_to_cyber_security_stay_safe_online.png" style="width:60px; vertical-align:middle; margin-right:15px; box-shadow:0 4px 12px #cc00ff; border-radius:8px;"><strong>Introduction to cyber security - The Open University</strong></li>
-      <li><strong>All India Rank 1</strong> – Text, Textuality and Digital Media (NPTEL) in July-Oct 2024 – <a href="https://nptel.ac.in/courses/109102156" target="_blank">View</a></li>
-      <li><strong>Completed</strong> – CS50 Cybersecurity (Harvard University) – <a href="https://cs50.harvard.edu/certificates/c9957497-5a8c-4b8b-ade7-a44a24e80aec" target="_blank">View</a></li>
-    </ul>
-  </section>
+        <!-- GoingDark - Surveillance Extension -->
+        <article class="operation-card">
+            <div class="op-icon">
+                <div class="project-logo">
+                    <img src="assets/logos/GoingDark.png" alt="GoingDark Logo" class="project-logo-img">
+                </div>
+            </div>
+            <div class="op-content">
+                <h3>GOINGDARK</h3>
+                <p class="op-desc">Surveillance-style browser extension with night vision, CCTV, and cyber scan modes for visual security simulation.</p>
+                <div class="op-tech">
+                    <span>JavaScript</span>
+                    <span>CSS3</span>
+                    <span>Browser Extensions</span>
+                </div>
+                <a href="https://github.com/ZDrago-afk/GoingDark" class="op-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> ACCESS_SOURCE
+                </a>
+            </div>
+        </article>
+    </div>
+</section>
 
-  <section id="certs">
-    <h2>Certifications</h2>
-    <ul>    
-        <li>Ethical Hacker (Cisco) – 
-            <a href="https://www.netacad.com/certificates?issuanceId=0ce42abc-7900-4536-8249-47905b7284e1" target="_blank">View Certificate</a>
-        </li>
-        <li>Junior Cybersecurity Analyst  (Cisco) – 
-            <a href="https://www.netacad.com/certificates?issuanceId=158be225-d227-4d7d-98a8-03a86473ced9" target="_blank">View Certificate</a>
-        </li>
-        <li>CS50's Introduction to Cybersecurity  (Harvard University) – 
-            <a href="https://cs50.harvard.edu/certificates/c9957497-5a8c-4b8b-ade7-a44a24e80aec" target="_blank">View Certificate</a>
-        </li>
-        <li>Cyber Threat Management (Cisco) – 
-            <a href="https://www.netacad.com/certificates?issuanceId=b89dc45e-db41-4f02-9896-b95392969dfd" target="_blank">View Certificate</a>
-        </li>
-        <li>Networking Basics (Cisco) – 
-            <a href="https://www.netacad.com/certificates/?issuanceId=bc2cc176-1d6a-49d1-b96a-defd9a511d40" target="_blank">View Certificate</a>
-        </li>
-        <li>Networking devices and initial configuration (Cisco) – 
-            <a href="https://www.netacad.com/certificates?issuanceId=c246ca1c-ef79-40a8-8e47-620f09a89470" target="_blank">View Certificate</a>
-        </li>
-        <li>Cybersecurity Analyst Job Simulation (Forage) – 
-            <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_68fc49c88740460a8e15e83b_1761415543499_completion_certificate.pdf" target="_blank">View Certificate</a>
-        </li>
-        <li>Career Essentials in Cybersecurity (Microsoft) – 
-            <a href="https://www.linkedin.com/learning/certificates/45fc164d93f2be70911955bf90e823e370bf807b72be4a8c1080c0d7d8d766cb" target="_blank">View Certificate</a>
-        </li>
-        <li>Google Cloud Skills Boost (Google) – 
-            <a href="https://www.cloudskillsboost.google/public_profiles/577fcb55-9768-4b99-8475-efd01771fe8d" target="_blank">View Profile</a>
-        </li>
-        <li>Credly Profile – 
-            <a href="https://www.credly.com/users/zaheer-abbas-khan" target="_blank">View Profile</a>
-        </li>
-        <li>Introduction to cyber security (open learn) – 
-            <a href="https://www.open.edu/openlearn/blocks/ocwstatement/statement.php?id=2969" target="_blank">View Certificate</a>
-        </li>
-        <li>Cyber Security Best Practices (Alison) – 
-            <a href="https://alison.com/certification/check/937919e3f9" target="_blank">View Certificate</a>
-        </li>
-        <li>Career Essentials in Cybersecurity (Microsoft and LinkedIn) – 
-            <a href="https://www.linkedin.com/learning/certificates/45fc164d93f2be70911955bf90e823e370bf807b72be4a8c1080c0d7d8d766cb" target="_blank">View Certificate</a>
-        </li>
-        <li>CCNA Network Fundamentals (Simplilearn) – 
-            <a href="https://simpli-web.app.link/e/wqKNDNbOAUb" target="_blank">View Certificate</a>
-        </li>
-        <li>CISSP Introduction (Simplilearn) – 
-            <a href="https://simpli-web.app.link/e/nxijwqgOAUb" target="_blank">View Certificate</a>
-        </li>
-        <li>Network Security (Great Learning) – 
-            <a href="https://olympus.mygreatlearning.com/courses/70951/certificate" target="_blank">View Certificate</a>
-        </li>
-        <li>Advanced Cyber Security - Threats and Governance (Great Learning) – 
-            <a href="https://olympus.mygreatlearning.com/courses/34484/certificate" target="_blank">View Certificate</a>
-        </li>
-        <li>Cyber Forensics (Great Learning) – 
-            <a href="https://olympus.mygreatlearning.com/courses/65868/certificate" target="_blank">View Certificate</a>
-        </li>
-    </ul>
-  </section>
+                <!-- CREDENTIALS SECTION -->
+                <section id="credentials" class="content-section" aria-labelledby="credentials-heading">
+                    <div class="section-header">
+                        <h2 id="credentials-heading"><span class="section-num">04</span> / SECURITY_CREDENTIALS</h2>
+                        <div class="section-line"></div>
+                    </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>DNS Poisoning Attack Simulation</strong><br>Built a simulated DNS poisoning setup within a local LAN. Documented mitigation strategies in a professional penetration test report.</li>
-      <li><strong>Phishing Policy Enforcement Guide</strong><br>Created layered phishing defense policy visuals using real screenshots and case-based analysis. Integrated into cybersecurity awareness training.</li>
-    </ul>
-  </section>
+                    <div class="credentials-container">
+                        <!-- CISCO CERTIFICATIONS -->
+                        <article class="cred-category">
+                            <h3><i class="fab fa-cisco"></i> CISCO CERTIFICATIONS</h3>
+                            <div class="creds-grid">
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Certified Ethical Hacker</h4>
+                                        <p>Cisco Networking Academy</p>
+                                        <a href="https://www.netacad.com/certificates?issuanceId=0ce42abc-7900-4536-8249-47905b7284e1" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Junior Cybersecurity Analyst</h4>
+                                        <p>Cisco Networking Academy</p>
+                                        <a href="https://www.netacad.com/certificates?issuanceId=158be225-d227-4d7d-98a8-03a86473ced9" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Cyber Threat Management</h4>
+                                        <p>Cisco Networking Academy</p>
+                                        <a href="https://www.netacad.com/certificates?issuanceId=b89dc45e-db41-4f02-9896-b95392969dfd" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Networking Basics</h4>
+                                        <p>Cisco Networking Academy</p>
+                                        <a href="https://www.netacad.com/certificates/?issuanceId=bc2cc176-1d6a-49d1-b96a-defd9a511d40" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Networking Devices & Configuration</h4>
+                                        <p>Cisco Networking Academy</p>
+                                        <a href="https://www.netacad.com/certificates?issuanceId=c246ca1c-ef79-40a8-8e47-620f09a89470" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <ul class="contact-info">
-      <li>Email: <a href="mailto:zaheerjavedkhankct@gmail.com">zaheerjavedkhankct@gmail.com</a></li>
-      <li>Phone: <a href="tel:+918107155688">+91 81071 55688</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/zaheer-khan-919b632b6" target="_blank">linkedin.com/in/zaheer-khan</a></li>
-      <li>GitHub: <a href="https://github.com/ZDrago-afk" target="_blank">https://github.com/ZDrago-afk</a></li>
-    </ul>
-  </section>
+                        <!-- ACADEMIC & OTHER CERTIFICATIONS -->
+                        <article class="cred-category">
+                            <h3><i class="fas fa-university"></i> ACADEMIC CREDENTIALS</h3>
+                            <div class="creds-list">
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>CS50's Introduction to Cybersecurity</h4>
+                                        <p>Harvard University</p>
+                                        <a href="https://cs50.harvard.edu/certificates/c9957497-5a8c-4b8b-ade7-a44a24e80aec" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-trophy"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>All India Rank 1 - NPTEL</h4>
+                                        <p>IIT Delhi (Top 1% Nationally)</p>
+                                        <a href="https://nptel.ac.in/courses/109102156" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Cybersecurity Analyst Job Simulation</h4>
+                                        <p>Tata Group (Forage)</p>
+                                        <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Career Essentials in Cybersecurity</h4>
+                                        <p>Microsoft & LinkedIn</p>
+                                        <a href="https://www.linkedin.com/learning/certificates/45fc164d93f2be70911955bf90e823e370bf807b72be4a8c1080c0d7d8d766cb" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="cred-item">
+                                    <div class="cred-icon">
+                                        <i class="fab fa-google"></i>
+                                    </div>
+                                    <div class="cred-info">
+                                        <h4>Google Cloud Skills Boost</h4>
+                                        <p>Google Cloud</p>
+                                        <a href="https://www.cloudskillsboost.google/public_profiles/577fcb55-9768-4b99-8475-efd01771fe8d" 
+                                           target="_blank" class="cred-link" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i> VERIFY
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
 
-  <footer>
-    <p>© 2025 Zaheer Abbas Khan. Resilient. Fearless. Focused.</p>
-  </footer>
+                <!-- TROPHIES SECTION -->
+                <section id="trophies" class="content-section" aria-labelledby="trophies-heading">
+                    <div class="section-header">
+                        <h2 id="trophies-heading"><span class="section-num">05</span> / OPERATION_TROPHIES</h2>
+                        <div class="section-line"></div>
+                    </div>
 
-  <script>
-    const links = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
+                    <div class="trophies-grid">
+                        <!-- ETHICAL HACKER -->
+                        <article class="trophy-card">
+                            <div class="trophy-badge">
+                                <!-- Replace with your actual image path -->
+                                <img src="assets/certificates/ethical-hacker.png" 
+                                     alt="Ethical Hacker Certification Badge"
+                                     onerror="this.style.display='none';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>ETHICAL HACKER</span>
+                                </div>
+                            </div>
+                            <div class="trophy-info">
+                                <h3>ETHICAL HACKER</h3>
+                                <p>Cisco Networking Academy</p>
+                                <span class="trophy-desc">Mastery of penetration testing and ethical hacking methodologies</span>
+                            </div>
+                        </article>
 
-    links.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const id = link.getAttribute('href').substring(1);
-        sections.forEach(sec => sec.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        links.forEach(l => l.classList.remove('active-link'));
-        link.classList.add('active-link');
-      });
-    });
+                        <!-- JUNIOR CYBERSECURITY ANALYST -->
+                        <article class="trophy-card">
+                            <div class="trophy-badge">
+                                <!-- Replace with your actual image path -->
+                                <img src="assets/certificates/junior-analyst.png" 
+                                     alt="Junior Cybersecurity Analyst Certification Badge"
+                                     onerror="this.style.display='none';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>JUNIOR ANALYST</span>
+                                </div>
+                            </div>
+                            <div class="trophy-info">
+                                <h3>JUNIOR CYBERSECURITY ANALYST</h3>
+                                <p>Cisco Networking Academy</p>
+                                <span class="trophy-desc">Proficiency in security operations and threat analysis</span>
+                            </div>
+                        </article>
 
-    document.querySelector('nav a[href="#about"]').classList.add('active-link');
-  </script>
+                        <!-- CYBER THREAT MANAGEMENT -->
+                        <article class="trophy-card">
+                            <div class="trophy-badge">
+                                <!-- Replace with your actual image path -->
+                                <img src="assets/certificates/threat-management.png" 
+                                     alt="Cyber Threat Management Certification Badge"
+                                     onerror="this.style.display='none';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-eye"></i>
+                                    <span>THREAT MGMT</span>
+                                </div>
+                            </div>
+                            <div class="trophy-info">
+                                <h3>CYBER THREAT MANAGEMENT</h3>
+                                <p>Cisco Networking Academy</p>
+                                <span class="trophy-desc">Expertise in threat intelligence and incident response</span>
+                            </div>
+                        </article>
+
+                        <!-- NETWORKING BASICS -->
+                        <article class="trophy-card">
+                            <div class="trophy-badge">
+                                <!-- Replace with your actual image path -->
+                                <img src="assets/certificates/networking-basics.png" 
+                                     alt="Networking Basics Certification Badge"
+                                     onerror="this.style.display='none';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-network-wired"></i>
+                                    <span>NETWORKING</span>
+                                </div>
+                            </div>
+                            <div class="trophy-info">
+                                <h3>NETWORKING BASICS</h3>
+                                <p>Cisco Networking Academy</p>
+                                <span class="trophy-desc">Foundation in network infrastructure and protocols</span>
+                            </div>
+                        </article>
+
+                        <!-- NETWORKING DEVICES & CONFIG -->
+                        <article class="trophy-card">
+                            <div class="trophy-badge">
+                                <!-- Replace with your actual image path -->
+                                <img src="assets/certificates/networking-devices.png" 
+                                     alt="Networking Devices & Configuration Certification Badge"
+                                     onerror="this.style.display='none';">
+                                <div class="badge-fallback">
+                                    <i class="fas fa-server"></i>
+                                    <span>NET DEVICES</span>
+                                </div>
+                            </div>
+                            <div class="trophy-info">
+                                <h3>NETWORKING DEVICES & CONFIG</h3>
+                                <p>Cisco Networking Academy</p>
+                                <span class="trophy-desc">Skills in network device configuration and management</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- CONTACT SECTION -->
+                <section id="contact" class="content-section" aria-labelledby="contact-heading">
+                    <div class="section-header">
+                        <h2 id="contact-heading"><span class="section-num">06</span> / CONTACT_PROTOCOL</h2>
+                        <div class="section-line"></div>
+                    </div>
+
+                    <div class="contact-container">
+                        <article class="contact-terminal">
+                            <div class="term-header">
+                                <span>SECURE_COMMS_TERMINAL</span>
+                                <span class="term-status active">ENCRYPTED</span>
+                            </div>
+                            <div class="term-body">
+                                <!-- Terminal content will be generated by JavaScript -->
+                                <div class="term-line">
+                                    <span class="prompt">root@zaheer:~$</span> 
+                                    <span class="command">initializing_contact_protocol...</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <div class="contact-links">
+                            <a href="mailto:zaheerjavedkhankct@gmail.com" class="contact-link">
+                                <i class="fas fa-envelope"></i>
+                                <div class="link-info">
+                                    <h4>ENCRYPTED MAIL</h4>
+                                    <p>zaheerjavedkhankct@gmail.com</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://linkedin.com/in/zaheer-khan-919b632b6" target="_blank" class="contact-link" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                                <div class="link-info">
+                                    <h4>PROFESSIONAL NETWORK</h4>
+                                    <p>/in/zaheer-khan</p>
+                                </div>
+                            </a>
+                            
+                            <a href="https://github.com/ZDrago-afk" target="_blank" class="contact-link" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                                <div class="link-info">
+                                    <h4>SOURCE CODE VAULT</h4>
+                                    <p>@ZDrago-afk</p>
+                                </div>
+                            </a>
+                            
+                            <a href="tel:+918107155688" class="contact-link">
+                                <i class="fas fa-satellite-dish"></i>
+                                <div class="link-info">
+                                    <h4>SECURE COMMS</h4>
+                                    <p>+91 81071 55688</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- FOOTER -->
+            <footer class="cyber-footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="footer-name">ZAHEER_ABBAS_KHAN</span>
+                        <span class="footer-tag">SECURITY_SPECIALIST</span>
+                    </div>
+                    <div class="footer-status">
+                        <div class="sys-status">
+                            <span class="status-dot active"></span>
+                            SYSTEM_STATUS: <span class="online">OPERATIONAL</span>
+                        </div>
+                        <div class="footer-copy">
+                            © 2024 | ALL SYSTEMS SECURE | ENCRYPTED TRANSMISSION ACTIVE
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Background Effects -->
+    <div class="scan-overlay" aria-hidden="true"></div>
+    <div class="data-stream" aria-hidden="true"></div>
+    <div class="network-nodes" aria-hidden="true">
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+        <div class="node"></div>
+    </div>
 </body>
 </html>
