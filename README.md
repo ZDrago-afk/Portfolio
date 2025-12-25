@@ -7,6 +7,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ZDrago-afk/Portfolio)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/ZDrago-afk/Portfolio)
 ![GitHub stars](https://img.shields.io/github/stars/ZDrago-afk/Portfolio?style=social)
+
 A professional and interactive cybersecurity portfolio website with a dark red, terminal-inspired theme.  
 Designed for ethical hackers, security researchers, and cybersecurity professionals.
 
