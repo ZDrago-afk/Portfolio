@@ -114,7 +114,8 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
   - Ctrl + 2 → Capabilities
   - Ctrl + 3 → Operations
   - Ctrl + 4 → Credentials
-  - Ctrl + 5 → Trophies
+  - Ctrl + 5 → certifications
+  - Ctrl + 6 → Trophies
   - Ctrl + 6 → Contact
 - Press ESC to reset skill animations
 
