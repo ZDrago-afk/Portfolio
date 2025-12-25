@@ -4,6 +4,9 @@
 ![Theme](https://img.shields.io/badge/Theme-Cyber%20Security-red)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
+![GitHub last commit](https://img.shields.io/github/last-commit/ZDrago-afk/Portfolio)
+![GitHub code size](https://img.shields.io/github/languages/code-size/ZDrago-afk/Portfolio)
+![GitHub stars](https://img.shields.io/github/stars/ZDrago-afk/Portfolio?style=social)
 A professional and interactive cybersecurity portfolio website with a dark red, terminal-inspired theme.  
 Designed for ethical hackers, security researchers, and cybersecurity professionals.
 
@@ -59,7 +62,18 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 | `assets/` | Contains all media assets |
 | `assets/photo_1.jpeg` | Profile photograph |
 | `assets/certificates/` | Certification and achievement images |
-| `assets/project-logos/` | Logos for portfolio projects |
+| `assets/logos/` | Logos for portfolio projects |
+
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Structure & Semantics |
+| CSS3 | Styling & Animations |
+| JavaScript | Interactivity & Effects |
+| Font Awesome | Icons |
+| Google Fonts | Typography |
 
 
 ## 🛠️ Setup Instructions
@@ -114,7 +128,7 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
   - Ctrl + 2 → Capabilities
   - Ctrl + 3 → Operations
   - Ctrl + 4 → Credentials
-  - Ctrl + 5 → certifications
+  - Ctrl + 5 → Certifications
   - Ctrl + 6 → Trophies
   - Ctrl + 7 → Contact
 - Press ESC to reset skill animations
