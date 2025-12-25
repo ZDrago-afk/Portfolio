@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Keyboard shortcuts
     initKeyboardShortcuts();
+
+    // Initialize certifications filter
+    initCertificationsFilter();
 });
 
 // ========== CORE FUNCTIONS ==========
@@ -362,9 +365,9 @@ function consoleGreeting() {
 // Keyboard shortcuts
 function initKeyboardShortcuts() {
     document.addEventListener('keydown', function(e) {
-        // Ctrl + 1-6 for navigation
-        if (e.ctrlKey && e.key >= '1' && e.key <= '6') {
-            const sectionIds = ['identity', 'capabilities', 'operations', 'credentials', 'trophies', 'contact'];
+        // Ctrl + 1-7 for navigation
+        if (e.ctrlKey && e.key >= '1' && e.key <= '7') {
+            const sectionIds = ['identity', 'capabilities', 'operations', 'credentials', 'certifications', 'trophies', 'contact'];
             const index = parseInt(e.key) - 1;
             if (sectionIds[index]) {
                 setActiveSection(sectionIds[index]);
@@ -398,6 +401,107 @@ function isElementInViewport(el) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+// ========== CERTIFICATIONS FILTER ==========
+
+// Initialize certifications filter
+function initCertificationsFilter() {
+    console.log('🔍 Initializing certifications filter...');
+    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const searchInput = document.getElementById('certSearch');
+    
+    if (!filterButtons.length || !searchInput) {
+        console.error('❌ Missing filter elements - buttons:', filterButtons.length, 'search input:', !!searchInput);
+        return;
+    }
+    
+    console.log('✅ Found', filterButtons.length, 'filter buttons and search input');
+    
+    // Filter by button click
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            console.log('Filter button clicked:', this.getAttribute('data-filter'));
+            
+            // Update active button
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            filterCertifications(filterValue, searchInput.value);
+        });
+    });
+    
+    // Filter by search input
+    searchInput.addEventListener('input', function() {
+        console.log('Search input:', this.value);
+        
+        const activeFilter = document.querySelector('.filter-btn.active');
+        const filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
+        
+        filterCertifications(filterValue, this.value);
+    });
+    
+    // Count and display total certificates
+    const totalCerts = document.getElementById('totalCerts');
+    if (totalCerts) {
+        const certCount = document.querySelectorAll('.cert-item').length;
+        totalCerts.textContent = certCount;
+        console.log('📊 Total certificates:', certCount);
+    }
+    
+    console.log('✅ Certifications filter initialized successfully!');
+}
+
+// Filter certifications
+function filterCertifications(category, searchTerm) {
+    console.log(`Filtering: category="${category}", search="${searchTerm}"`);
+    
+    const certItems = document.querySelectorAll('.cert-item');
+    let visibleCount = 0;
+    
+    certItems.forEach((item, index) => {
+        const itemCategory = item.getAttribute('data-category');
+        const itemText = item.textContent.toLowerCase();
+        const searchLower = searchTerm.toLowerCase();
+        
+        // Check if item matches both category and search term
+        const categoryMatch = category === 'all' || itemCategory === category;
+        const searchMatch = !searchTerm || itemText.includes(searchLower);
+        
+        if (categoryMatch && searchMatch) {
+            item.style.display = 'flex';
+            item.style.animation = 'fadeIn 0.5s ease';
+            visibleCount++;
+            console.log(`✅ Showing item ${index}: ${itemCategory}`);
+        } else {
+            item.style.display = 'none';
+            console.log(`❌ Hiding item ${index}: ${itemCategory}`);
+        }
+    });
+    
+    // Update search status
+    updateSearchStatus(visibleCount);
+}
+
+// Update search status display
+function updateSearchStatus(count) {
+    const searchStatus = document.querySelector('.search-status');
+    if (!searchStatus) {
+        console.error('❌ Search status element not found!');
+        return;
+    }
+    
+    console.log(`📊 ${count} items visible`);
+    
+    if (count === 0) {
+        searchStatus.textContent = '[NO RESULTS]';
+        searchStatus.style.color = '#ff5f56';
+    } else {
+        searchStatus.textContent = `[FOUND: ${count}]`;
+        searchStatus.style.color = '#27ca3f';
+    }
 }
 
 // ========== UTILITY FUNCTIONS ==========
@@ -440,4 +544,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     console.log('✅ Portfolio fully loaded and ready');
+});
+
+// Debug: Check if filter is working
+window.addEventListener('load', function() {
+    console.log('🎯 Testing certifications filter...');
+    
+    // Check if filter buttons exist
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    console.log('Filter buttons found:', filterBtns.length);
+    
+    // Check if cert items exist
+    const certItems = document.querySelectorAll('.cert-item');
+    console.log('Certification items found:', certItems.length);
+    
+    // Check data categories
+    certItems.forEach((item, i) => {
+        const category = item.getAttribute('data-category');
+        console.log(`Item ${i}: data-category="${category}"`);
+    });
+    
+    // Manually test filter
+    setTimeout(() => {
+        console.log('🧪 Testing Cisco filter...');
+        const ciscoBtn = document.querySelector('[data-filter="cisco"]');
+        if (ciscoBtn) {
+            console.log('Cisco button found, clicking...');
+            ciscoBtn.click();
+        }
+    }, 3000);
 });
