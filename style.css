@@ -1581,6 +1581,11 @@ body::after {
     padding: 6px 12px;
 }
 
+.exp-card.internship .exp-date-box { border-color: #ff6b35; }
+.exp-card.internship .exp-year { color: #ff6b35; }
+.exp-card.activity .exp-date-box { border-color: #a855f7; }
+.exp-card.activity .exp-year { color: #a855f7; }
+
 .exp-year {
     font-family: 'Orbitron', monospace;
     font-size: 0.9rem;
