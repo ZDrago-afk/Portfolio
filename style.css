@@ -1542,6 +1542,21 @@ body::after {
     min-width: 0;
 }
 
+.exp-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.exp-meta-top h4 {
+    margin-bottom: 0 !important;
+    flex: 1;
+    min-width: 200px;
+}
+
 .exp-meta h4 {
     font-family: 'Orbitron', monospace;
     color: var(--cyber-text);
