@@ -359,15 +359,15 @@ function typeTerminalText() {
 function consoleGreeting() {
     console.log('%c🔐 SECURE ACCESS GRANTED 🔐', 'color: #ff003c; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #ff003c;');
     console.log('%cSystem: Portfolio Interface\nStatus: Operational\nUser: Administrator\nTime: ' + new Date().toLocaleTimeString(), 'color: #00ff00; font-family: monospace;');
-    console.log('%cNavigation: Ctrl + 1-6 keys\nReset Animations: ESC key', 'color: #ff9900; font-family: monospace;');
+    console.log('%cNavigation: Ctrl + 1-8 keys\nReset Animations: ESC key', 'color: #ff9900; font-family: monospace;');
 }
 
 // Keyboard shortcuts
 function initKeyboardShortcuts() {
     document.addEventListener('keydown', function(e) {
-        // Ctrl + 1-7 for navigation
-        if (e.ctrlKey && e.key >= '1' && e.key <= '7') {
-            const sectionIds = ['identity', 'capabilities', 'operations', 'credentials', 'certifications', 'trophies', 'contact'];
+        // Ctrl + 1-8 for navigation
+        if (e.ctrlKey && e.key >= '1' && e.key <= '8') {
+            const sectionIds = ['identity', 'capabilities', 'operations', 'credentials', 'certifications', 'trophies', 'experience', 'contact'];
             const index = parseInt(e.key) - 1;
             if (sectionIds[index]) {
                 setActiveSection(sectionIds[index]);
