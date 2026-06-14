@@ -24,7 +24,8 @@ This project is a personal cybersecurity portfolio designed to showcase:
 - Ethical hacking skills
 - Cybersecurity tools and technologies
 - Real-world security projects
-- Certifications and achievements
+- Security credentials and certifications (including Hack The Box)
+- Field experience (internships, hackathons, and activities)
 
 The portfolio follows a red-team inspired, terminal-based design to reflect a hacker-centric mindset while maintaining a professional presentation.
 
@@ -36,12 +37,15 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 - Dark red cyber security theme with glow effects
 - Fully responsive layout for all devices
 - Animated hacker-style background
+- Interactive experience timeline & achievements layout
 - Smooth section transitions
 
 ### 🔧 Interactive Elements
 - Animated skill progress bars on scroll
 - Tool cards with hover tooltips
 - Project cards with custom logos
+- Dynamic certifications search and categorization filter
+- Interactive Hack The Box credentials and achievements card display
 - Terminal typing animation in contact section
 - Certificate trophy cards with hover glow
 
@@ -131,7 +135,8 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
   - Ctrl + 4 → Credentials
   - Ctrl + 5 → Certifications
   - Ctrl + 6 → Trophies
-  - Ctrl + 7 → Contact
+  - Ctrl + 7 → Experience
+  - Ctrl + 8 → Contact
 - Press ESC to reset skill animations
 
 ### Terminal Controls
@@ -200,8 +205,12 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 - Update project details and links
 
 ### Add Certifications
-- Add a new certificate image
-- Create a corresponding trophy card in HTML
+- Add a new certificate image to `assets/certificates/`
+- Create a corresponding certification item and trophy card in `Portfolio.html`
+
+### Update Experience
+- Add new internships, hackathons, or activities under the `#experience` section in `Portfolio.html`
+- Use the structured CSS classes (`internship`, `hackathon`, `activity`) to maintain visual consistency
 
 
 ## 📄 License
