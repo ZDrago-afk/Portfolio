@@ -1426,7 +1426,7 @@ body::after {
 
 /* === FALLBACK STYLES FOR MISSING IMAGES === */
 .badge-fallback {
-    display: flex;
+    display: none; /* Hidden by default — shown via JS onerror when image fails */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1434,6 +1434,10 @@ body::after {
     height: 100%;
     background: var(--cyber-black);
     border-radius: 5px;
+}
+
+.badge-fallback.show {
+    display: flex;
 }
 
 .badge-fallback i {
