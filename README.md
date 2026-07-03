@@ -238,5 +238,5 @@ See the LICENSE file for more details.
 
 ## 📞 Contact & Support
 
-- Email: zaheerjavedkhankct@gmail.com  
+- Discod: hassu2005
 - GitHub Issues: Open an issue for bugs or suggestions
