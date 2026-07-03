@@ -276,9 +276,7 @@ function typeTerminalText() {
         { prompt: 'root@zaheer:~$', command: 'establish_secure_connection --target=recruiter' },
         { output: '[✓] Connection established via AES-256-GCM', class: 'success' },
         { prompt: 'root@zaheer:~$', command: 'display_contact_channels' },
-        { output: 'ENCRYPTED_EMAIL: zaheerjavedkhankct@gmail.com' },
-        { output: 'SATELLITE_LINK: +91 81071 55688' },
-        { output: 'LINKEDIN_PROFILE: /in/zaheer-khan' },
+        { output: 'LINKEDIN_PROFILE: /in/zaheer-khan-919b632b6' },
         { output: 'GITHUB_VAULT: @ZDrago-afk' },
         { prompt: 'root@zaheer:~$', command: 'system_status --security' },
         { output: '[✓] All systems secure. Ready for contact.', class: 'success' }
