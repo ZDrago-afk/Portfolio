@@ -238,5 +238,6 @@ See the LICENSE file for more details.
 
 ## 📞 Contact & Support
 
-- Discod: hassu2005
+- Contact: Available via LinkedIn (linked in portfolio)  
 - GitHub Issues: Open an issue for bugs or suggestions
+
