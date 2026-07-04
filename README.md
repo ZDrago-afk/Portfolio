@@ -26,6 +26,7 @@ This project is a personal cybersecurity portfolio designed to showcase:
 - Real-world security projects
 - Security credentials and certifications (including Hack The Box)
 - Field experience (internships, hackathons, and activities)
+- Academic record (degrees, coursework, and courses like CS50)
 
 The portfolio follows a red-team inspired, terminal-based design to reflect a hacker-centric mindset while maintaining a professional presentation.
 
@@ -130,13 +131,14 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 - Use top navigation buttons to switch sections
 - Keyboard shortcuts:
   - Ctrl + 1 → Identity
-  - Ctrl + 2 → Capabilities
+  - Ctrl + 2 → Experience
   - Ctrl + 3 → Operations
-  - Ctrl + 4 → Credentials
-  - Ctrl + 5 → Certifications
-  - Ctrl + 6 → Trophies
-  - Ctrl + 7 → Experience
-  - Ctrl + 8 → Contact
+  - Ctrl + 4 → Certifications
+  - Ctrl + 5 → Academics
+  - Ctrl + 6 → Capabilities
+  - Ctrl + 7 → Credentials
+  - Ctrl + 8 → Trophies
+  - Ctrl + 9 → Contact
 - Press ESC to reset skill animations
 
 ### Terminal Controls
@@ -211,6 +213,10 @@ The portfolio follows a red-team inspired, terminal-based design to reflect a ha
 ### Update Experience
 - Add new internships, hackathons, or activities under the `#experience` section in `Portfolio.html`
 - Use the structured CSS classes (`internship`, `hackathon`, `activity`) to maintain visual consistency
+
+### Update Academics
+- Add degrees, courses, or certifications under the `#academics` section in `Portfolio.html`
+- Use the structured CSS classes (`academics-card` and `academic-badge`) to maintain visual consistency
 
 
 ## 📄 License
