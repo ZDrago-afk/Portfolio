@@ -1864,6 +1864,7 @@ body::after {
 .internship-badge { background: rgba(255, 107, 53, 0.15); color: #ff6b35; border: 1px solid rgba(255,107,53,0.3); }
 .hackathon-badge  { background: rgba(255, 0, 60, 0.15);   color: var(--cyber-red); border: 1px solid rgba(255,0,60,0.3); }
 .activity-badge   { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168,85,247,0.3); }
+.academic-badge   { background: rgba(255, 0, 60, 0.15);   color: var(--cyber-red); border: 1px solid rgba(255,0,60,0.3); }
 
 .exp-date-box {
     flex-shrink: 0;
