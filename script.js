@@ -441,12 +441,35 @@ function initCertificationsFilter() {
         filterCertifications(filterValue, this.value);
     });
     
-    // Count and display total certificates
+    // Count and display total and category certificates dynamically
     const totalCerts = document.getElementById('totalCerts');
     if (totalCerts) {
-        const certCount = document.querySelectorAll('.cert-item').length;
-        totalCerts.textContent = certCount;
-        console.log('📊 Total certificates:', certCount);
+        const certItems = document.querySelectorAll('.cert-item');
+        totalCerts.textContent = certItems.length;
+        
+        let ciscoCount = 0;
+        let univCount = 0;
+        let indCount = 0;
+        let platCount = 0;
+        
+        certItems.forEach(item => {
+            const cat = item.getAttribute('data-category');
+            if (cat === 'cisco') ciscoCount++;
+            else if (cat === 'university') univCount++;
+            else if (cat === 'industry') indCount++;
+            else if (cat === 'platform') platCount++;
+        });
+        
+        const ciscoEl = document.getElementById('ciscoCerts');
+        if (ciscoEl) ciscoEl.textContent = ciscoCount;
+        const univEl = document.getElementById('univCerts');
+        if (univEl) univEl.textContent = univCount;
+        const indEl = document.getElementById('indCerts');
+        if (indEl) indEl.textContent = indCount;
+        const platEl = document.getElementById('platCerts');
+        if (platEl) platEl.textContent = platCount;
+        
+        console.log(`📊 Certification stats: Total=${certItems.length}, Cisco=${ciscoCount}, Univ=${univCount}, Ind=${indCount}, Plat=${platCount}`);
     }
     
     console.log('✅ Certifications filter initialized successfully!');
