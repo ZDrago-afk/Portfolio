@@ -477,12 +477,10 @@ function initCertificationsFilter() {
 
 // Filter certifications
 function filterCertifications(category, searchTerm) {
-    console.log(`Filtering: category="${category}", search="${searchTerm}"`);
-    
     const certItems = document.querySelectorAll('.cert-item');
     let visibleCount = 0;
     
-    certItems.forEach((item, index) => {
+    certItems.forEach(item => {
         const itemCategory = item.getAttribute('data-category');
         const itemText = item.textContent.toLowerCase();
         const searchLower = searchTerm.toLowerCase();
@@ -495,10 +493,8 @@ function filterCertifications(category, searchTerm) {
             item.style.display = 'flex';
             item.style.animation = 'fadeIn 0.5s ease';
             visibleCount++;
-            console.log(`✅ Showing item ${index}: ${itemCategory}`);
         } else {
             item.style.display = 'none';
-            console.log(`❌ Hiding item ${index}: ${itemCategory}`);
         }
     });
     
@@ -567,31 +563,7 @@ window.addEventListener('load', function() {
     console.log('✅ Portfolio fully loaded and ready');
 });
 
-// Debug: Check if filter is working
+// Portfolio ready
 window.addEventListener('load', function() {
-    console.log('🎯 Testing certifications filter...');
-    
-    // Check if filter buttons exist
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    console.log('Filter buttons found:', filterBtns.length);
-    
-    // Check if cert items exist
-    const certItems = document.querySelectorAll('.cert-item');
-    console.log('Certification items found:', certItems.length);
-    
-    // Check data categories
-    certItems.forEach((item, i) => {
-        const category = item.getAttribute('data-category');
-        console.log(`Item ${i}: data-category="${category}"`);
-    });
-    
-    // Manually test filter
-    setTimeout(() => {
-        console.log('🧪 Testing Cisco filter...');
-        const ciscoBtn = document.querySelector('[data-filter="cisco"]');
-        if (ciscoBtn) {
-            console.log('Cisco button found, clicking...');
-            ciscoBtn.click();
-        }
-    }, 3000);
+    console.log('✅ Portfolio fully initialized.');
 });
